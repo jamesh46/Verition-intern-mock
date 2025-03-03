@@ -6,4 +6,4 @@ def import_and_clean(stock_data_path):
     data['Date'] = pd.to_datetime(data['date'])
     data = data.dropna()
     data.to_csv('cleaned_stock_data.csv', index=False)
-    return data.describe(), data.head()
+    return data.info(), data.head()
